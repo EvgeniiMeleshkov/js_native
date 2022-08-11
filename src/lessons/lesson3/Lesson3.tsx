@@ -18,13 +18,10 @@ const Lesson3 = () => {
     const [serachResultByType, setSerachResultByType] = useState<ResponseType>(initState);
 
     const searchFilm = () => {
-        //@ts-ignore
         API.searchFilmsByTitle(searchName).then(res => setSerachResult(res.data))
     };
-
     const searchByType = (e: React.MouseEvent<HTMLButtonElement>) => {
         const type: string = e.currentTarget.dataset.t ? e.currentTarget.dataset.t : '';
-        //@ts-ignore
         API.searchFilmsByType(searchNameByType, type).then(res => setSerachResultByType(res.data))
     }
 
@@ -36,7 +33,6 @@ const Lesson3 = () => {
                 <input type="text" value={searchName} onChange={(e) => setSearchName(e.currentTarget.value)}/>
                 <button onClick={searchFilm}>Search</button>
                 <div style={{fontWeight: 'bold', fontSize: 'x-large', fontFamily: 'serif', color: 'navy'}}>
-                    {/*@ts-ignore*/}
                     ..{serachResult.Title}..
                 </div>
                 <div>
