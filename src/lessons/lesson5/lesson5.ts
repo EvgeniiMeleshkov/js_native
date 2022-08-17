@@ -35,6 +35,7 @@ let someObj:someObjType = {
     age: 32
 }
 
+
 // Task 02
 // реализовать счетчик counter в виде объекта со следующими методами:
 // get current count; - выводит текущее значение счетчика
@@ -43,6 +44,8 @@ let someObj:someObjType = {
 // set current count; - принимает и присваивает значение счетчику
 // rest current count - устанавливает значение счетчика равным 0
 // все методы должны ссылаться на сам объект
+
+
 
 // Task 03
 // переделайте код из Task 02, что бы сработал следующий код:
@@ -58,7 +61,6 @@ let One = {name: 'One'};
 let Two = {name: 'Two', sayHello: function() {console.log(`Hello, my name is ${this.name}`)}};
 
 
-
 // Task 06
 // создайте объект helperObj у которого есть следующие методы:
 // changeName - меняет значение у свойства name объекта на полученное значение
@@ -66,10 +68,12 @@ let Two = {name: 'Two', sayHello: function() {console.log(`Hello, my name is ${t
 // greeting - используется функция sayHello из Task 05
 // можно использовать @ts-ignore
 
+
 // Bind
 // 1) Дана функция sumTwoNumbers, реализовать функцию bindNumber которая принимает функцию sumTwoNumbers и число, и
 // возвращает другую функцию, которое также принимает число и возвращает сумму этих чисел. Замыкание использовать нельзя
 function sumTwoNumbers(a:number,b:number):number {return a + b};
+
 
 // 2) Напишите функцию которая принимает первым аргументом объект One, а вторым helperObj. Данная функция
 // возвращает другую функцию которая принимает строку в качестве аргумента и устанавливает ее свойству name объекта One

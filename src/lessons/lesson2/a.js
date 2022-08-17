@@ -32,3 +32,27 @@ function a (num) {
     return helper
 }
 console.log(a(4)(4, 3)(3, 5)(3))
+
+//
+// class Person {
+//     constructor(name) {
+//         this.name = name
+//     }
+//     _connectedPersons = []
+//     introduce () {
+//         console.log(`My name is ${this.name}`)
+//     }
+//     getConnections () {
+//         console.log([...this._connectedPersons])
+//     }
+//     addConnection (person) {
+//         this._connectedPersons.push(person.name)
+//         person._connectedPersons.push(this.name)
+//     }
+// }
+//
+// let Ivan = new Person('Ivan Ivanov')
+// let Bob = new Person('bob bobov')
+// Ivan.addConnection(Bob)
+// Bob.getConnections()
+// Ivan.getConnections()

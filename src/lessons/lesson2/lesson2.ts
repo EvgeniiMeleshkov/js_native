@@ -205,3 +205,4 @@ function flatt(arr) {
 //@ts-ignore
 console.log(flatt([7,2,3,[4,5]]))
 
+
