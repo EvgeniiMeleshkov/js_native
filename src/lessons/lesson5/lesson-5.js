@@ -69,4 +69,35 @@ let One = {name: 'One'};
 let Two = {name: 'Two', sayHello: function() {console.log(`Hello, my name is ${this.name}`)}};
 
 
-Two.sayHello.bind(One)()
+Two.sayHello.call(One)
+
+//=======================================================================//
+
+const helperObj = {
+    changeName(name) {
+        return this.name = name
+    },
+    setAge(age) {
+        return this.age = age
+    },
+    greeting: Two.sayHello
+}
+
+const a = {}
+a.name = helperObj.changeName('Viki')
+a.age = helperObj.setAge(24)
+helperObj.greeting.call(a)
+console.log(a)
+
+//=========================================================================//
+//
+// function sumTwoNumbers(a ,b) {return a + b}
+//
+// function bindNumber(foo, number) {
+//         function inner (num) {
+//         console.log(num + this)
+//     }
+//     return inner.bind(this)
+// }
+//
+// bindNumber(sumTwoNumbers(1,2), 3)(3)
